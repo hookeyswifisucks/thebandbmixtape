@@ -66,12 +66,23 @@ links {
     padding: 20px;
     display: inline;
 }
+    
+    #imageboi {
+    position:absolute;
+    left:0;
+    top:363px;
+    width:225px;
+    height:50px;
+    background-image:url('cover.png');
+    z-index:10;
+    text-align:center;
+}
 </style>
 </head>
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="navbar center">
+<div id="navbar w3-center">
 <ul>
   <links href="#songs" style="text-decoration:none">SONGS</links>
    <links href="#cover" style="text-decoration:none"><b>THE B&B MIXTAPE</b></links>
@@ -81,9 +92,7 @@ links {
 
 <br>
 
-<header style="max-width:500px;min-width:500px" class="center" id="cover">
-  <img class="w3-image" src="BBMIXTAPE.png" alt="cover" width="1600" height="800">
-</header>
+<div class="imageboi"></div>
 
 <br>
 
