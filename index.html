@@ -10,43 +10,54 @@
       h1,h2,h3,h4,h5,h6 {
       font-family: "Playfair Display";
       letter-spacing: 1px;}
-      /* The Modal (background) */
-      .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      padding-top: 100px; /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-      }
-      /* Modal Content */
-      .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      }
-      /* The Close Button */
-      .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      }
-      .close:hover,
-      .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-      }
+.modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        opacity:0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+    }
+
+    .modalDialog:target {
+        opacity:1;
+        pointer-events: auto;
+    }
+
+    .modalDialog > div {
+        width: 400px;
+        position: relative;
+        margin: 10% auto;
+        padding: 5px 20px 13px 20px;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    .close {
+        background: #606061;
+        color: #FFFFFF;
+        line-height: 25px;
+        position: absolute;
+        right: -12px;
+        text-align: center;
+        top: -10px;
+        width: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+    }
+
+    .close:hover { background: #D3D3D3; }
       .navbar {
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
       }
       ul {
@@ -115,17 +126,21 @@
          <p>
             <i>
          <center>NOTE: Songs edited to take out profanity :(</center></i></p>
-         <h4 id="lw">
-            <center>Big Sean - Bounce Back</center>
-         </h4>
+         <a style="text-decoration:none" href="#openModal1"><center><b>Big Sean - Bounce Back</b></center></a>
+         <br>
+                  <a style="text-decoration:none" href="#openModal2"><center><b>Lil Uzi Vert - Malfunction</b></center></a>
+                           <br>
+                           <a style="text-decoration:none" href="#openModal3"><center><b>Jay-Z - Anything</b></center></a>
+         <br>
+                  <a style="text-decoration:none" href="#openModal4"><center><b>Lil Uzi Vert - XO Tour Llif3</b></center></a>
       </div>
       <br>
       <br>
    </body>
    <!-- The Modal -->
-   <div id="lwModal" class="modal">
-      <div class="modal-content">
-         <span class="close">&times;</span>
+<div id="openModal1" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
          <p>
          <center><b>“Last night took an L, but tonight I bounce back,
 Boy, I been broke as [heck], cashed a check and bounced back.”
@@ -134,34 +149,53 @@ Boy, I been broke as [heck], cashed a check and bounced back.”
          <p>
          <center>Now this song may now perfectly represent their relationship, but Big Sean’s concept of ‘bouncing back’ fits it well. In the lines above, Big Sean shows that no matter what happens, he is able to ‘bounce back’. This happens to Benedick and Beatrice when they break up, but realize that they need each other and remarry.</center>
          </p>
-      </div>
-   </div>
-   <script>
-      // Get the modal
-      var modal = document.getElementById('lwModal');
-      
-      // Get the button that opens the modal
-      var btn = document.getElementById("lw");
-      
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-      
-      // When the user clicks the button, open the modal 
-      btn.onclick = function() {
-          modal.style.display = "block";
-      }
-      
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-          modal.style.display = "none";
-      }
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
+</div>
+</div>
+
+  <div id="openModal2" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+         <p>
+         <center><b>“No one wants to die alone,
+They don't wanna miss the show”
+</b></center>
+         </p>
+         <p>
+         <center>In the lines above, Lil Uzi Vert explains that nobody wants to end up alone in life and it could be inferred that he thinks that everybody needs someone else in life. These lines do a very good job of representing how Benedick thought earlier in the story that he wanted to remain a bachelor and that he didn’t need or want to marry, but eventually realized that he did want to marry, after realizing that Beatrice loved him. </center>
+         </p>
+</div>
+</div>
+  <div id="openModal3" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+         <p>
+         <center><b>“Yes I'd do anything (Anything?),
+Anything for you,
+I’d do a bid, lose a rib, bust a cap, trusting that,
+Run up to heaven doors, exchange my life for yours.”
+</b></center>
+         </p>
+         <p>
+         <center>This song represents how Benedick was willing to do anything for Beatrice’s love, even kill Claudio. When Beatrice asked him to, he didn’t take much persuasion to decide that he was willing to do it. Jay-Z’s and Benedick’s loyalty to there significant others seem very similar when examining the line above.</center>
+         </p>
+</div>
+</div>
+  <div id="openModal4" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+         <p>
+         <center><b>
+“I don't really care if you cry,
+On the real you should've never lied,
+Should've saw the way she looked me in my eyes,
+She said, ‘Baby, I am not afraid to die.’”
+</b></center>
+         </p>
+         <p>
+         <center>This song represents Benedick and Beatrice’s love/hate relationship. Lil Uzi Vert and his ex-girlfriend Brittany Byrd had an on and off relationship over the course of the past few years, ending in later 2017 near the release of the song. This is similar to how Benedick and Beatrice split up and got back together when they realized that they loved each other.</center>
+         </p>
+</div>
+</div>
    </script>
    </body>
 </html>
